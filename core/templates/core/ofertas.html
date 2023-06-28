@@ -1,0 +1,52 @@
+{% extends 'core/layout.html' %}
+
+{% block content %}
+    <main>
+        {% load static %}
+        <!-- -----CAROUSEL-------- -->
+        
+        <!-- -----CARD------------ -->
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="{% static 'img/ofertaS/descuentos.png' %}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Ofertas</h5>
+                            <p class="card-text">¡Revisa las mejores ofertas que tenemos para ofrecerte!</p>
+                            <a href="#" class="btn btn-primary">Explorar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="{% static 'img/celulares/celulares.png' %}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Celulares</h5>
+                            <p class="card-text">¿Cansado de tu celular? revisa nuestros nuevos equipos.</p>
+                            <a href="{% url 'celulares' %}" class="btn btn-primary">Explorar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="{% static 'img/computadores/componentes_3.png' %}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Computacion</h5>
+                            <p class="card-text">Componentes ultimas generaciones al mejor precio.</p>
+                            <a href="{% url 'computacionperifericos' %}" class="btn btn-primary">Explorar</a>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+            
+        </div>
+
+
+
+
+
+    </main>
+    {% endblock %}

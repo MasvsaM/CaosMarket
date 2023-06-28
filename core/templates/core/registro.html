@@ -1,0 +1,104 @@
+{% extends 'core/layout.html' %}
+
+{% block content %}
+    <main>
+        {% load static %}
+        <div class="container-md" style="background-color: #F8F9FA;">
+            <br>
+            <div class="row g-5 ">
+                <div class="col-md-6 offset-md-3">
+                    <center> <br><br>
+                        <strong>
+                            <h2>Formulario de Registro</h2>
+                        </strong><br><br>
+                    </center>
+
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <label class="form-label">Nombres</label>
+                                <input type="text" class="form-control" id="txtnombre">
+                            </div>
+                            <div class="col-sm-6">
+                                <label class="form-label">Apellidos</label>
+                                <input type="text" class="form-control" id="txtapellidos">
+                            </div>
+                            <div class="col-sm-6">
+                                <label class="form-label">Fecha Nacimiento</label>
+                                <input type="date" class="form-control" id="txtFnac">
+                            </div>
+                            <div class="col-sm-6">
+                                <label class="form-label">Telefono</label>
+                                <input type="text" class="form-control" id="txttelefono">
+                            </div>
+                            <div class="col-sm-12">
+                                <label class="form-label">Correo Electronico</label>
+                                <input type="email" class="form-control" id="txtemail">
+                            </div>
+                            <div class="col-sm-6">
+                                <label class="form-label">Contraseña</label>
+                                <input type="password" class="form-control" id="txtcontra">
+                            </div>
+                            <div class="col-sm-6">
+                                <label class="form-label">Confirmar Contraseña</label>
+                                <input type="password" class="form-control" id="txtconfirmacion">
+                            </div>
+
+                            <div class="col-12">
+                                <label class="form-check-label">RUT</label>
+                                <input type="radio" class="form-check-input" name="flexRadioDefault" id="rbtnRUT" />
+                                <label class="form-check-label">PASAPORTE</label>
+                                <input type="radio" class="form-check-input" name="flexRadioDefault"
+                                    id="rbtnPasaporte" />
+                                <input type="text" class="form-control" id="txtidentificador"
+                                    placeholder="Si es RUT debe considerar -(Guión) y digito verificador" />
+                            </div>
+
+                            <div class="col-sm-12">
+                                <label class="form-label">Region</label>
+                                <select class="form-select" id="cbxCiudad">
+                                    <optgroup>
+                                        <option value="0" selected>---Debe Seleccionar una Ciudad</option>
+                                        <option value="1">I Region</option>
+                                        <option value="2">II Region</option>
+                                        <option value="3">III Region</option>
+                                        <option value="4">IV Region</option>
+                                        <option value="5">V Region </option>
+                                        <option value="6">VI Region</option>
+                                        <option value="7">Region Metropolitana</option>
+                                        <option value="8">VIII Region</option>
+                                        <option value="9">IX Region</option>
+                                        <option value="10">X Region</option>
+                                        <option value="11">XI Region</option>
+                                        <option value="12">XII Region</option>
+                                        <option value="13">XIII Region</option>
+                                        <option value="14">XIV Region</option>
+                                        <option value="15">XV Region</option>
+                                        <option value="16">XVI Region </option>
+                                    </optgroup>
+                                </select>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <label class="form-label">Dirección</label>
+                                <input type="text" class="form-control" id="txtdireccion">
+                            </div>
+
+                            <div class="col-sm-6">
+                                <label class="form-label">Codigo Postal</label>
+                                <input type="text" class="form-control" id="txtcodpostal">
+                            </div>
+                        </div><br>
+                        <input class="w-20 btn btn-primary btn-lg" type="submit" id="btnenviar2" value="Enviar">
+                        <input class="w-20 btn btn-primary btn-lg" type="reset" value="Borrar" id="btnreset">
+                        <br>
+                    </form>
+                </div> 
+            </div>
+            <br>  <br>
+        </div><hr class="my-1" style="color: slategray;">
+  
+    </main>
+
+ 
+    {% endblock %}
