@@ -20,6 +20,9 @@ urlpatterns=[
     path('computaciongaming/',computaciongaming, name="computaciongaming"),
     path('apirest/', include('apirest.urls')),
     path('admin/', admin.site.urls),
+    path('indexadmin/', index, name='indexadmin'),
+    
+    
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

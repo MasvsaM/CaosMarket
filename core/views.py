@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from django.contrib.auth.forms import UserCreationForm
+
 
 def index (request):
     comentario ={"titulo":"COMENTARIO ENVIADO DESDE DJANGO A LA PAGINA"}
@@ -10,9 +12,16 @@ def contactanos (request):
 def login (request):
      return render(request, "core/login.html")
 
+   
+
+
+
 def registro (request):
 
-    return render(request, "core/registro.html")     
+    return render(request, "core/registro.html", {})  
+    
+
+
 
 def ofertas (request):
 
