@@ -85,8 +85,16 @@
                         </a>
                         <ul class="navbar-nav me-auto mb-5 mb-lg-1">
                             <div class="btn-group" role="group" aria-label="Basic outlined example">
+                                {% if user.is_authenticated %}
+                                <p style="margin-right: 15px;">Bienvenido, <span id="user">{{ user }}</span></p>
+                           
+                                <a href="{% url 'logout' %}" class="btn btn-outline-danger" type="submit">Desconectarse</a>
+                                {% else %}
                                 <a href="{% url 'login' %}" class="btn btn-outline-info" type="submit">Iniciar Sesión</a>
+                               
                                 <a href="{% url 'registro' %}" class="btn btn-outline-danger" type="submit">Regístrate</a>
+                                
+                                {% endif %}
                             </div>
                         </ul>
                     </form>
@@ -166,16 +174,24 @@
                             <li>
                                 <a href="{% url 'contactanos' %}" class="text-dark">Contactenos</a>
                             </li>
+                            
                             <li>
                                 <a href="{% url 'contactanos' %}" class="text-dark">Reclamos</a>
                             </li>
+                            {% if user.is_authenticated %}
+                            <li>
+                                <a href="{% url 'logout' %}" class="text-dark">Desconectarse</a>
+                            </li>
+                            {% else %}
                             <li>
                                 <a href="{% url 'login' %}" class="text-dark">Login</a>
                             </li>
+                            
                             <li>
                                 <a href="{% url 'registro' %}" class="text-dark">Registrate</a>
                             </li>
-                            
+                            {% endif %}
+
                         </ul>
                     </div>
 

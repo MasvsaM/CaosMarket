@@ -13,12 +13,12 @@
                         </strong><br><br>
                     </center>
 
-                    <form method="post" action="{% url 'registro' %}">
+                    <for method="POST" action="{% url 'registrouser' %}">
                         {% csrf_token %}
                         <div class="row g-3">
                             <div class="col-sm-6">
                                 <label class="form-label">Nombres</label>
-                                <input type="text" class="form-control" id="txtnombre">
+                                <input type="text" class="form-control" id="txtnombre" name="username">
                             </div>
                             <div class="col-sm-6">
                                 <label class="form-label">Apellidos</label>
@@ -34,15 +34,15 @@
                             </div>
                             <div class="col-sm-12">
                                 <label class="form-label">Correo Electronico</label>
-                                <input type="email" class="form-control" id="txtemail">
+                                <input type="email" class="form-control" id="txtemail" name="email">
                             </div>
                             <div class="col-sm-6">
                                 <label class="form-label">Contraseña</label>
-                                <input type="password" class="form-control" id="txtcontra">
+                                <input type="password" class="form-control" id="txtcontra"name="password">
                             </div>
                             <div class="col-sm-6">
                                 <label class="form-label">Confirmar Contraseña</label>
-                                <input type="password" class="form-control" id="txtconfirmacion">
+                                <input type="password" class="form-control" id="txtconfirmacion" name="confirmacion">
                             </div>
 
                             <div class="col-12">
