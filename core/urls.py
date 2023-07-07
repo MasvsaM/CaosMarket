@@ -4,13 +4,15 @@ from django.contrib.auth.views import LoginView, LogoutView
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
+from . import views
 
 urlpatterns=[
     path('',index, name="index"),
     path('registro/',registro, name="registro"),
     path('login/',LoginView.as_view(template_name="core/login.html"), name="login"),
     path('logout/',LogoutView.as_view(template_name="core/index.html"), name="logout"),
-    path('/',contactanos, name="contactanos"),
+    path('contactanos/',contactanos, name="contactanos"),
+    path('carrito/', views.carrito, name='carrito'),
     path('ofertas/',ofertas, name="ofertas"),
     path('celulares/',celulares, name="celulares"),
     path('celularesAndroid/',celularesAndroid, name="celularesAndroid"),

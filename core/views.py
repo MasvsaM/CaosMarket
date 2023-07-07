@@ -60,3 +60,6 @@ def computacioncomponentes(request):
 
 def computaciongaming(request):
     return render(request, "core/Computacion_Gaming.html")
+
+def carrito(request):
+    return render(request, 'core/carrito.html')
