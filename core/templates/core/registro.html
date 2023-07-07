@@ -13,7 +13,7 @@
                         </strong><br><br>
                     </center>
 
-                    <for method="POST" action="{% url 'registrouser' %}">
+                    <form method="POST" action="{% url 'registro' %}">
                         {% csrf_token %}
                         <div class="row g-3">
                             <div class="col-sm-6">
@@ -98,8 +98,5 @@
             </div>
             <br>  <br>
         </div><hr class="my-1" style="color: slategray;">
-  
     </main>
-
- 
-    {% endblock %}
+{% endblock %}

@@ -84,11 +84,17 @@ WSGI_APPLICATION = 'market.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'mydatabase'
-    }
-
+   'default': {
+        'ENGINE': 'django.db.backends.oracle',
+        'NAME': '127.0.0.1:1521/orcl',
+        'USER': 'c##caosMarket',
+        'PASSWORD': 'caos1234',
+        'TEST': {
+            'USER': 'default_test',
+            'TBLSPACE': 'default_test_tbls',
+            'TBLSPACE_TMP': 'default_test_tbls_tmp',
+        },
+    },
 }
 
 
@@ -137,3 +143,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL= reverse_lazy('indexadmin')
 #Cuando se cierra Sessión, nos lleva a la pagina princial
 LOGOUT_REDIRECT_URL = reverse_lazy('index')
+
