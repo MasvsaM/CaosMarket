@@ -25,7 +25,7 @@
                                   <td data-th="Product">
                                       <div class="row">
                                           <div class="col-md-3 text-left">
-                                              <img src="{% static '' %}"  img/componente_4.png" alt="" class="img-fluid d-none d-md-block rounded mb-2 shadow ">
+                                              <img src="{% static 'img/componente_4.png' %}"   alt="" class="img-fluid d-none d-md-block rounded mb-2 shadow ">
                                           </div>
                                           <div class="col-md-9 text-left mt-sm-2">
                                               <h4>Ventiladores Corsair rgb</h4>
@@ -52,7 +52,7 @@
                                   <td data-th="Product">
                                       <div class="row">
                                           <div class="col-md-3 text-left">
-                                              <img src="img/componentes_2.jpg" alt="" class="img-fluid d-none d-md-block rounded mb-2 shadow ">
+                                              <img src="{% static 'img/componentes_2.jpg' %}" alt="" class="img-fluid d-none d-md-block rounded mb-2 shadow ">
                                           </div>
                                           <div class="col-md-9 text-left mt-sm-2">
                                               <h4>RAM vengeance 32GB 3200mhz</h4>
@@ -79,7 +79,7 @@
                                   <td data-th="Product">
                                       <div class="row">
                                           <div class="col-md-3 text-left">
-                                              <img src="img/periferico_2.png" alt="" class="img-fluid d-none d-md-block rounded mb-2 shadow ">
+                                              <img src="{% static 'img/periferico_2.png' %}" alt="" class="img-fluid d-none d-md-block rounded mb-2 shadow ">
                                           </div>
                                           <div class="col-md-9 text-left mt-sm-2">
                                               <h4>Audifonos Corsair LXIR93</h4>
@@ -112,10 +112,10 @@
               </div>
               <div class="row mt-4 d-flex align-items-center">
                   <div class="col-sm-6 order-md-2 text-right">
-                      <a href="catalog.html" class="btn btn-primary mb-4 btn-lg pl-5 pr-5">Checkout</a>
+                      <a href="{% url 'index' %}" class="btn btn-primary mb-4 btn-lg pl-5 pr-5">Checkout</a>
                   </div>
                   <div class="col-sm-6 mb-3 mb-m-1 order-md-1 text-md-left">
-                      <a href="index.html">
+                      <a href="{% url 'index' %}">
                           <i class="fas fa-arrow-left mr-2"></i> Continue Shopping</a>
                   </div>
               </div>
@@ -124,4 +124,4 @@
 
 
     </main>
-    {% endblock %}
+{% endblock %}
